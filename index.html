@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nature Memory | Cannon Spears</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+</head>
+
+<body>
+
+
+    <section class="board">
+
+        <!-- Information board -->
+
+        <section class="information">
+            <span id="starsInfo">
+                <i id="star1i" class="fa-star fas"></i>
+                <i id="star2i" class="fa-star fas"></i>
+                <i id="star3i" class="fa-star fas"></i>
+            </span>
+            <span id="score">- Moves</span>
+            <span class="timer">- Seconds</span>
+            <i id="reset" class="fas fa-redo"></i>
+
+        </section>
+
+        <!-- Game board laying out front and back cards -->
+
+        <div class="card" data-icon="fire">
+            <img src="img/fire.svg" alt="fire" class="front">
+            <img src="img/earth.svg" alt="earth" class="back">
+        </div>
+        <div class="card" data-icon="fire">
+            <img src="img/fire.svg" alt="fire" class="front">
+            <img src="img/earth.svg" alt="earth" class="back">
+        </div>
+        <div class="card" data-icon="water">
+            <img src="img/water.svg" alt="water" class="front">
+            <img src="img/earth.svg" alt="earth" class="back">
+        </div>
+        <div class="card" data-icon="water">
+            <img src="img/water.svg" alt="water" class="front">
+            <img src="img/earth.svg" alt="earth" class="back">
+        </div>
+        <div class="card" data-icon="mountain">
+            <img src="img/mountain.svg" alt="mountain" class="front">
+            <img src="img/earth.svg" alt="earth" class="back">
+        </div>
+        <div class="card" data-icon="mountain">
+            <img src="img/mountain.svg" alt="mountain" class="front">
+            <img src="img/earth.svg" alt="earth" class="back">
+        </div>
+        <div class="card" data-icon="snowflake">
+            <img src="img/snowflake.svg" alt="snowflake.svg" class="front">
+            <img src="img/earth.svg" alt="earth" class="back">
+        </div>
+        <div class="card" data-icon="snowflake">
+            <img src="img/snowflake.svg" alt="snowflake.svg" class="front">
+            <img src="img/earth.svg" alt="earth" class="back">
+        </div>
+        <div class="card" data-icon="rainbow">
+            <img src="img/rainbow.svg" alt="rainbow" class="front">
+            <img src="img/earth.svg" alt="earth" class="back">
+        </div>
+        <div class="card" data-icon="rainbow">
+            <img src="img/rainbow.svg" alt="rainbow" class="front">
+            <img src="img/earth.svg" alt="earth" class="back">
+        </div>
+        <div class="card" data-icon="flower">
+            <img src="img/flower.svg" alt="flower" class="front">
+            <img src="img/earth.svg" alt="earth" class="back">
+        </div>
+        <div class="card" data-icon="flower">
+            <img src="img/flower.svg" alt="flower" class="front">
+            <img src="img/earth.svg" alt="earth" class="back">
+        </div>
+        <div class="card" data-icon="lightning">
+            <img src="img/lightning.svg" alt="lightning.svg" class="front">
+            <img src="img/earth.svg" alt="earth" class="back">
+        </div>
+        <div class="card" data-icon="lightning">
+            <img src="img/lightning.svg" alt="lightning.svg" class="front">
+            <img src="img/earth.svg" alt="earth" class="back">
+        </div>
+        <div class="card" data-icon="trees">
+            <img src="img/trees.svg" alt="trees.svg" class="front">
+            <img src="img/earth.svg" alt="earth" class="back">
+        </div>
+        <div class="card" data-icon="trees">
+            <img src="img/trees.svg" alt="trees.svg" class="front">
+            <img src="img/earth.svg" alt="earth" class="back">
+        </div>
+    </section>
+
+    <!-- Overlay/Modal for game completion -->
+
+    <div id="overlay" onclick="restartGame()">
+        <div id="text">
+            <h1>Great job!</h1>
+            <div id="starsOverlay">
+                <i id="star1o" class="fa-star"></i>
+                <i id="star2o" class="fa-star"></i>
+                <i id="star3o" class="fa-star"></i>
+            </div>
+            <span class=timer>0</span>
+            <p>Click anywhere to play again</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

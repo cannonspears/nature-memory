@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-image: url(img/background.png);
+  /* background-color: black; */
+  display: flex;
+  overflow: hidden;
+}
+
+/* Information panel Styles */
+
+.information {
+  color: white;
+  width: 100%;
+  position: relative;
+  bottom: 5px;
+}
+
+#starsInfo {
+  position: absolute;
+  left: 50px;
+}
+
+#score {
+  position: absolute;
+  left: 220px;
+}
+
+.information .timer {
+  position: absolute;
+  right: 220px;
+}
+
+#reset {
+  position: absolute;
+  right: 70px;
+}
+
+/* Game Board Styles */
+
+.board {
+  width: 640px;
+  height: 640px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+
+#reset:hover {
+  cursor: pointer;
+}
+
+.card {
+  position: relative;
+  width: calc(25% - 10px);
+  height: calc(25% - 10px);
+  margin: 5px;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.card:active {
+  transform: scale(0.98);
+  transition: transform 0.3s;
+}
+
+.card.flipped {
+  transform: rotateX(180deg);
+}
+
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  border-radius: 5px;
+  /* background: black; */
+  backface-visibility: hidden;
+}
+
+.front {
+  transform: rotateX(180deg);
+}
+
+/* Overlay Styles */
+
+#overlay {
+  position: fixed;
+  display: none;
+  margin: auto;
+  width: 640px;
+  height: 640px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+  cursor: pointer;
+}
+
+#text {
+  font-family: sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#text h1 {
+  font-size: 50px;
+  margin: auto;
+  position: relative;
+  bottom: 15px;
+}
+
+#starsOverlay {
+  margin: auto;
+  font-size: 70px;
+}
+#text p {
+  font-size: 20px;
+  margin: auto;
+  position: relative;
+  top: 50px;
+}
+
+#overlay .timer {
+  position: absolute;
+  left: 17%;
+  top: calc(50% + 70px);
+  font-size: 20px;
+}
